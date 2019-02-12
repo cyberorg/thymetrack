@@ -1,0 +1,14 @@
+#!/bin/bash
+
+output_file=/live_capture/live_capture.json
+path="$HOME/public_html/thyme"
+
+if [ ! -d "$path" ]; then
+  mkdir -p "$path"
+fi
+
+# Executes thyme track 4 times per minute and reports the result.
+while sleep 15s; do thyme track -o $path/$output_file ; done;
+
+exit 0
+

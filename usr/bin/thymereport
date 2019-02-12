@@ -1,0 +1,6 @@
+#!/bin/bash
+for i in `ls -d /home/* |grep -v lost`; do
+	if [ -f "$i/public_html/thyme/live_capture/live_capture.json" ]; then
+		thyme.stats -b -r -p "$i/public_html/thyme"
+	fi
+done

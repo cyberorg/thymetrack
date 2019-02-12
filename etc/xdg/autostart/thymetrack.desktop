@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Thyme Track
+Exec=thymetrack
+StartupNotify=false
+Terminal=false
