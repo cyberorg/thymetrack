@@ -8,5 +8,5 @@ Note: requires webserver set up to serve /home/username/public_html
 
 or use file manager and browse to ~/public_html/thyme folder.
 
-Thyme: https://github.com/sourcegraph/thyme
 Based on https://github.com/fanf22/automatic-thyme
+Thyme: https://github.com/sourcegraph/thyme
