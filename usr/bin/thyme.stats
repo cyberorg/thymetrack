@@ -49,13 +49,13 @@ done
 
 # Checking directories existence.
 if   [[ ! -d $path ]]; then
-	mkdir $path
+	mkdir -p $path
 elif [[ ! -d $path/$live_capture_file_path ]]; then
-	mkdir $path/$live_capture_file_path
+	mkdir -p $path/$live_capture_file_path
 elif [[ ! -d $path/$output_file_path ]]; then
-	mkdir $path/$output_file_path 
+	mkdir -p $path/$output_file_path 
 elif [[ ! -d $path/$backup_file_path ]]; then
-	mkdir $path/$backup_file_path
+	mkdir -p $path/$backup_file_path
 fi
 
 # Checking of HTML report status.
@@ -64,7 +64,7 @@ if [[ ! $set_option_b ]]; then
 fi
 
 # Backup current HTML report.
-mv $path/$output_file_path/* $path/$backup_file_path
+mv $path/$output_file_path/* $path/$backup_file_path 2>/dev/null || true
 
 # Generating HTML report.
 thyme show -i $path/$live_capture_file_path/$live_capture_file -w stats > $path/$output_file_path/$output_file
